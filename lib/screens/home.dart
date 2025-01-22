@@ -1,11 +1,11 @@
 import 'dart:isolate';
 
 import 'package:flutter/material.dart';
-import 'package:task/screens/Controller/users.dart';
+import 'package:task/Controller/users.dart';
 import 'package:task/utils/appColors.dart';
 import 'package:task/utils/appDimens.dart';
 import 'package:task/utils/userdetail_card.dart';
-import 'package:task/screens/models/userData.dart';
+import 'package:task/models/userData.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});

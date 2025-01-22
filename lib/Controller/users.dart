@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:task/screens/models/userData.dart';
+import 'package:task/models/userData.dart';
 
 class UserProvider extends ChangeNotifier {
   List<UserData> users = [];
