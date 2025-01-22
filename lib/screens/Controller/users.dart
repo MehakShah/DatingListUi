@@ -8,9 +8,6 @@ class UserProvider extends ChangeNotifier {
 
   Future<List<UserData>?> fetchDatingList(int results) async {
     try {
-      print("pppppppppppppp");
-
-      print(results);
       final response =
           await _dio.get('https://randomuser.me/api/?results=$results');
       if (response.statusCode == 200) {

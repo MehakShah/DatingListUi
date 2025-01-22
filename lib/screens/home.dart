@@ -29,10 +29,9 @@ class _HomeState extends State<Home> {
   }
 
   void onScroll() {
-    print(scrollController.position.extentAfter);
     if (scrollController.position.extentAfter <= 200) {
       totalResults += 10;
-      print('eeeeeeeeeeeeeeeeeeeeeeeeeeee');
+
       if (!_isLoading) {
         _fetchData();
       }
@@ -52,10 +51,9 @@ class _HomeState extends State<Home> {
       });
       List<UserData>? fetchedUsers =
           await UserProvider().fetchDatingList(totalResults);
-      print(fetchedUsers!.length);
-      print("lengthhhhhhhhhh");
+
       setState(() {
-        _users = fetchedUsers;
+        _users = fetchedUsers!;
         _isLoading = false;
       });
     } catch (error) {
